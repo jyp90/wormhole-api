@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout/error">
+<head>
+  <meta charset="UTF-8">
+  <title th:text="${advice.status}"></title>
+</head>
+<body>
+<style>
+  .tab {
+    padding-left: 30px;
+  }
+</style>
+<div style="width: 100%">
+  <div>{</div>
+  <div class="tab">
+    <span>"ip" : </span>
+    "<span th:text="${advice.ip}"></span>"
+  </div>
+  <div class="tab">
+    <span>"uri" : </span>
+    "<span th:text="${advice.uri}"></span>"
+  </div>
+  <div class="tab">
+    <span>"message" : </span>
+    "<span th:text="${advice.message}"></span>"
+  </div>
+  <div class="tab">
+    <span>"method" : </span>
+    "<span th:text="${advice.method}"></span>"
+  </div>
+  <div class="tab">
+    <span>"parameters" : </span>
+    "<span th:text="${advice.parameters}"></span>"
+  </div>
+  <div>}</div>
+</div>
+
+</body>
+</html>

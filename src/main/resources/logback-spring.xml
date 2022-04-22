@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+  <property name="MODULE" value="logs"/>
+  <property name="TIME_FORMAT" value="%d{yyyy-MM-dd HH:mm:ss.SSS}"/>
+  <appender class="ch.qos.logback.core.ConsoleAppender" name="LOCAL_CONSOLE_POLICY">
+    <encoder>
+      <pattern>${TIME_FORMAT} [%thread] %highlight([%-5level]) %cyan(%logger{36}) - %msg %n
+      </pattern>
+    </encoder>
+  </appender>
+
+  <root level="INFO">
+    <springProfile name="local,dev">
+      <appender-ref ref="LOCAL_CONSOLE_POLICY"/>
+    </springProfile>
+  </root>
+</configuration>

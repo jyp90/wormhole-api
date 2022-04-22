@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: jdbc:h2:~/test2;
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
